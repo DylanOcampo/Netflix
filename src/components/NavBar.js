@@ -45,9 +45,9 @@ const navigate = useNavigate()
             <img src={logo} alt="Logo"/>
           </Navbar.Brand>
             <Nav >
-              <Nav.Link href="/home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Inicio</Nav.Link>
+              <Nav.Link href="/home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
               <Nav.Link href="/series" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('series')}>Series</Nav.Link>
-              <Nav.Link href="/movies" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('movies')}>Peliculas</Nav.Link>
+              <Nav.Link href="/movies" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('movies')}>Movies</Nav.Link>
             </Nav>
             
             <span className="navbar-text" >

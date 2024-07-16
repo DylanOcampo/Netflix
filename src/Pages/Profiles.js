@@ -11,6 +11,8 @@ export const Profiles = () => {
 
     const navigate = useNavigate()
 
+    
+
     const gotToNewPage=()=>{
         navigate("/home");
     }
@@ -22,30 +24,30 @@ export const Profiles = () => {
 
         <div class="centered">
             <Container>
-                <Row style={{justifyContent: "center", paddingBottom: "30px"}}><h1 style={{fontSize: "50px"}}>¿Quién esta viendo ahora?</h1></Row>
+                <Row style={{justifyContent: "center", paddingBottom: "30px"}}><h1 style={{fontSize: "50px"}}>Who is watching now?</h1></Row>
             <Row>
             <Col style={{ paddingRight: "40px"}} >
-                <Button onClick={() => gotToNewPage()}><img src={Profile1} alt="Perfil" style={{height: "200px", width: "auto"}}/></Button>
-                <h4 style={{textAlign: "center", paddingTop: "10px"}}>Usuario 1</h4>
+                <Button onClick={() => gotToNewPage()}><img src={Profile1} alt="User" style={{height: "200px", width: "auto"}}/></Button>
+                <h4 style={{textAlign: "center", paddingTop: "10px"}}>User 1</h4>
             </Col>
             <Col style={{ paddingRight: "40px"}}>
-                <Button onClick={() => gotToNewPage()}><img src={Profile2} alt="Perfil" style={{height: "200px", width: "auto"}}/></Button>
-                <h4 style={{textAlign: "center", paddingTop: "10px"}}>Usuario 2</h4>
+                <Button onClick={() => gotToNewPage()}><img src={Profile2} alt="User" style={{height: "200px", width: "auto"}}/></Button>
+                <h4 style={{textAlign: "center", paddingTop: "10px"}}>User 2</h4>
             </Col>
             <Col style={{ paddingRight: "40px"}}>
-                <Button onClick={() => gotToNewPage()}><img src={Profile3} alt="Perfil" style={{height: "200px", width: "auto"}}/></Button>
-                <h4 style={{textAlign: "center", paddingTop: "10px"}}>Usuario 3</h4>
+                <Button onClick={() => gotToNewPage()}><img src={Profile3} alt="User" style={{height: "200px", width: "auto"}}/></Button>
+                <h4 style={{textAlign: "center", paddingTop: "10px"}}>User 3</h4>
             </Col>
             <Col style={{ paddingRight: "40px"}}>
-                <Button onClick={() => gotToNewPage()}><img src={Profile4} alt="Perfil" style={{height: "200px", width: "auto"}}/></Button>
-                <h4 style={{textAlign: "center", paddingTop: "10px"}}>Usuario 4</h4>
+                <Button onClick={() => gotToNewPage()}><img src={Profile4} alt="User" style={{height: "200px", width: "auto"}}/></Button>
+                <h4 style={{textAlign: "center", paddingTop: "10px"}}>User 4</h4>
             </Col>
             </Row>
             <Row style={{justifyContent: "center", paddingTop: "100px"}}>
-                <Button style={{fontSize: "30px", backgroundColor: "black", color: "white", paddingLeft: "10px", paddingRight:" 10px", paddingTop: "10px", paddingBottom: "10px", borderColor: "white"}}>Administrar perfiles</Button>
+                <Button style={{fontSize: "30px", backgroundColor: "black", color: "white", paddingLeft: "10px", paddingRight:" 10px", paddingTop: "10px", paddingBottom: "10px", borderColor: "white"}}>Manage Profiles</Button>
             </Row>
             <Row style={{justifyContent: "center", paddingTop: "10px"}}>
-                <Button onClick={() => returnPage()} style={{fontSize: "30px", backgroundColor: "black", color: "grey", paddingLeft: "10px", paddingRight:" 10px", paddingTop: "10px", paddingBottom: "10px", borderColor: "grey"}}>Salir</Button>
+                <Button onClick={() => returnPage()} style={{fontSize: "30px", backgroundColor: "black", color: "grey", paddingLeft: "10px", paddingRight:" 10px", paddingTop: "10px", paddingBottom: "10px", borderColor: "grey"}}>Quit</Button>
             </Row>
             </Container>
         </div>
