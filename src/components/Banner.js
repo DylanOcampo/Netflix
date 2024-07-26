@@ -17,9 +17,6 @@ export const Banner = ({identifierB}) => {
         window.open(Links[identifierB -1], '_blank');;
     }
 
-
-
-
     return (
 
         <div>

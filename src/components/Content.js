@@ -46,7 +46,7 @@ export const Content = ({identifier}) => {
     if(identifier === 3) {
         element = (
         <div>
-            <h1 style={{paddingTop: "10px",  paddingLeft: "10px"}}>Best Series</h1>
+            <h1 style={{paddingTop: "10px",  paddingLeft: "10px"}}>Best Movies</h1>
             <Row>
                 <Col><MovieItem Type = {0}></MovieItem></Col>
             </Row>

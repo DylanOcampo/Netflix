@@ -143,6 +143,7 @@ p.danger {
     -moz-border-radius: 1px;
     -ms-border-radius: 1px;
     -o-border-radius: 1px;
+    box-shadow:100px;
 }
 
 
