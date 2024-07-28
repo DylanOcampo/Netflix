@@ -118,6 +118,16 @@ p.danger {
   border-radius: 8px;
 }
 
+.infoContainer{
+  width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+
 .Input{
   background-color: #00000075;
   border-color: green;

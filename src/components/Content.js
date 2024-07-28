@@ -1,5 +1,6 @@
 import { Col, Row } from "react-bootstrap"
-import {MovieItem} from "./MovieItem.js"
+import { DiscoverMovie } from "./DiscoverMovie.js";
+import { DiscoverSeries } from "./DiscoverSeries.js";
 
 
 export const Content = ({identifier}) => {
@@ -9,17 +10,17 @@ export const Content = ({identifier}) => {
         element = (
         <div>
             <h1 style={{paddingTop: "10px",  paddingLeft: "10px"}}>Netflix Originals</h1>
-            <Row>
-                <Col><MovieItem Type = {0}></MovieItem></Col>
-            </Row>
+            
+                <DiscoverMovie num ={1}></DiscoverMovie>
+            
             <h1 style={{paddingTop: "10px", paddingLeft: "10px"}}>Must Watch</h1>
-            <Row>
-                <Col><MovieItem Type = {1}></MovieItem></Col>
-            </Row>
+            
+                <DiscoverSeries num ={1}></DiscoverSeries>
+            
             <h1 style={{paddingTop: "10px", paddingLeft: "10px"}}>Recommended</h1>
-            <Row>
-                <Col><MovieItem Type = {1}></MovieItem></Col>
-            </Row>
+            
+                <DiscoverSeries num ={2}></DiscoverSeries>
+            
         </div>
     );
     }
@@ -28,17 +29,14 @@ export const Content = ({identifier}) => {
         element = (
         <div>
             <h1 style={{paddingTop: "10px",  paddingLeft: "10px"}}>Best Series</h1>
-            <Row>
-                <Col><MovieItem Type = {1}></MovieItem></Col>
-            </Row>
+                <DiscoverSeries num ={1}></DiscoverSeries>
+
             <h1 style={{paddingTop: "10px", paddingLeft: "10px"}}>Must Watch</h1>
-            <Row>
-                <Col><MovieItem Type = {1}></MovieItem></Col>
-            </Row>
+                <DiscoverSeries num ={2}></DiscoverSeries>
+
             <h1 style={{paddingTop: "10px", paddingLeft: "10px"}}>Recommended</h1>
-            <Row>
-                <Col><MovieItem Type = {1}></MovieItem></Col>
-            </Row>
+                <DiscoverSeries num ={3}></DiscoverSeries>
+
         </div>
     );
     }
@@ -47,17 +45,12 @@ export const Content = ({identifier}) => {
         element = (
         <div>
             <h1 style={{paddingTop: "10px",  paddingLeft: "10px"}}>Best Movies</h1>
-            <Row>
-                <Col><MovieItem Type = {0}></MovieItem></Col>
-            </Row>
+                <DiscoverMovie num ={1}></DiscoverMovie>
+
             <h1 style={{paddingTop: "10px", paddingLeft: "10px"}}>Must Watch</h1>
-            <Row>
-                <Col><MovieItem Type = {0}></MovieItem></Col>
-            </Row>
+                <DiscoverMovie num ={2}></DiscoverMovie>
             <h1 style={{paddingTop: "10px", paddingLeft: "10px"}}>Recommended</h1>
-            <Row>
-                <Col><MovieItem Type = {0}></MovieItem></Col>
-            </Row>
+                <DiscoverMovie num ={3}></DiscoverMovie>
         </div>
     );
     }
