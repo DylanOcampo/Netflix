@@ -19,9 +19,7 @@ export const SeasonMenu = ({ referenceid, identifier}) => {
         type = "movie";
     }
 
-    const apiKey = "b6f310b3d311139fc11dd6747fe3d946";
-
-    let url = `https://api.themoviedb.org/3/${type}/${referenceid}/recommendations?api_key=${apiKey}`;
+    let url = `https://api.themoviedb.org/3/${type}/${referenceid}/recommendations?api_key=${process.env.REACT_APP_API_KEY}`;
 
     useEffect(() => {
     // POST request using fetch inside useEffect React hook

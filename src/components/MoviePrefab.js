@@ -24,6 +24,14 @@ export const MoviePrefab = ({url, title, referenceId}) => {
         changeType(1);
   };
 
+  if(title !== null && title !== undefined){
+    if(title.length > 29) {
+        title = title.substr(0,29);
+        title = title + "...";
+    }
+  }
+
+    
 
     return (
             <div> <button style={{backgroundColor: "rgba(217, 217, 217, 0)" , borderColor: "rgba(217, 217, 217, 0)"}}><img className="BigMovie" src={Prefab} alt="Movies" onClick={handleClick}></img > </button> 

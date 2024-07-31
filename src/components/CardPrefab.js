@@ -23,8 +23,7 @@ export const CardPrefab = ({image, title, summary, identifier, yt}) => {
         Prefab = "https://image.tmdb.org/t/p/original/" + image
     }
 
-    const apiKey = "b6f310b3d311139fc11dd6747fe3d946";
-    const url = `https://api.themoviedb.org/3/movie/${yt}/videos?api_key=${apiKey}&language=en-US`;
+    const url = `https://api.themoviedb.org/3/movie/${yt}/videos?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`;
 
     useEffect(() => {
     // POST request using fetch inside useEffect React hook

@@ -1,6 +1,6 @@
 
 
-import helper from '../assets/imgs/Movies/Missing2.png';
+import helper from '../assets/imgs/black.png';
 
 import React, { useContext } from 'react';
 import { ElementContext } from '../Context/InfoContext';
@@ -28,6 +28,10 @@ export const RecomendationPrefab = ({url, title, overview, referenceId, num, ide
         changeType(identifier);
   };
 
+    if(title.length > 29) {
+        title = title.substr(0,29);
+        title = title + "...";
+    }
 
     return (
 

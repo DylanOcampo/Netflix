@@ -1,5 +1,5 @@
 
-import helper from '../assets/imgs/Movies/Missing2.png';
+import helper from '../assets/imgs/black.png';
 import HDLogo from "../assets/imgs/HDLogo.png"
 import close from "../assets/imgs/close.png"
 import {FloatingOverlay} from '@floating-ui/react';
@@ -10,6 +10,8 @@ import play from "../assets/imgs/play.svg"
 import { SeasonMenu } from "./SeasonMenu";
 import React, { useContext } from 'react';
 import { ElementContext } from '../Context/InfoContext';
+
+
 
 export const Info = ({ identifier, referenceid}) => {
 
@@ -44,11 +46,9 @@ export const Info = ({ identifier, referenceid}) => {
         type = "movie";
     }
 
-    const apiKey = "b6f310b3d311139fc11dd6747fe3d946";
+    let url = `https://api.themoviedb.org/3/${type}/${referenceid}?api_key=${process.env.REACT_APP_API_KEY}`;
 
-    let url = `https://api.themoviedb.org/3/${type}/${referenceid}?api_key=${apiKey}`;
-
-    let url2 = `https://api.themoviedb.org/3/${type}/${referenceid}/videos?api_key=${apiKey}`
+    let url2 = `https://api.themoviedb.org/3/${type}/${referenceid}/videos?api_key=${process.env.REACT_APP_API_KEY}`
 
     console.log(url)
     useEffect(() => {

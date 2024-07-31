@@ -1,14 +1,18 @@
 import { useState, useEffect } from "react";
-import { Navbar, Nav, Button } from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
 import logo from '../assets/imgs/Logonetflix.png';
 import navIcon1 from '../assets/imgs/person_icon.svg';
 import navIcon2 from '../assets/imgs/search_icon.svg';
+import navIcon3 from '../assets/imgs/close.png';
 
+import React, { useContext } from 'react';
+import { ElementContext2 } from '../Context/SearchContext';
+
+import Form from 'react-bootstrap/Form';
 
 import { useNavigate } from "react-router-dom";
 
-export const NavBar = ({baseState}) => {
-
+export const NavBar = ({baseState, isSearchActive}) => {
 
 const navigate = useNavigate()
 
@@ -16,8 +20,26 @@ const navigate = useNavigate()
         navigate("/profiles");
     }
 
+    const goToHome=()=>{
+        navigate("/home");
+    }
+
+    const { changeValue } = useContext(ElementContext2);
+
+    const gotToSearch=()=>{
+      if(isSearchActive){
+        changeValue(query)
+      }else{
+        changeValue("")
+        navigate("/search");
+      }
+        
+    }
+
   const [activeLink, setActiveLink] = useState(baseState);
   const [scrolled, setScrolled] = useState(false);
+
+  const [query, setQuery] = useState("");
 
   useEffect(() => {
     const onScroll = () => {
@@ -50,10 +72,14 @@ const navigate = useNavigate()
               <Nav.Link href="/movies" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('movies')}>Movies</Nav.Link>
             </Nav>
             
-            <span className="navbar-text" >
-              <div className="social-icon" style={{paddingRight: "10px"}}>
-                <Button><img src={navIcon2} alt="" style={{width: "40px"}}/></Button>
-                <Button onClick={() => gotToNewPage()}><img src={navIcon1} alt="" style={{width: "40px"}}/></Button>
+            <span >
+              <div  style={{paddingRight: "10px", display: "flex"}}>
+                {isSearchActive ? <div style={{paddingTop: "10px"}}><Form.Control type="text" value={query} onChange={e => setQuery(e.target.value)} className="SearchInput" /> 
+                <button onClick={() => goToHome()} className="clearButton"><img src={navIcon3} alt="" style={{width: "20px", position: "relative", left: "-30px", bottom: "-5px"}}/></button>
+                
+                </div>: null}
+                <button onClick={() => gotToSearch()} className="clearButton"><img src={navIcon2} alt="" style={{width: "40px"}}/></button>
+                <button onClick={() => gotToNewPage()} className="clearButton"><img src={navIcon1} alt="" style={{width: "40px"}}/></button>
                 
               </div>
 

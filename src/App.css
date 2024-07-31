@@ -141,6 +141,7 @@ p.danger {
 .SmallMovie {
   width: 400px;
   border-radius: 8px;
+  max-height: 250px;
 
   opacity: 0.8;
 
@@ -159,7 +160,18 @@ p.danger {
     align-items: center;
 }
 
+.SearchInput {
+  background-color: #00000000;
+  border-color: rgb(255, 255, 255);
+  height: 50px;
+  width: 10vw;
+  -webkit-text-fill-color: #fff;
+}
 
+.clearButton{
+  background-color: rgba(0, 255, 255, 0);
+  border-color: #ffffff00;
+}
 
 .Input{
   background-color: #00000075;

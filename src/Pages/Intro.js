@@ -15,8 +15,6 @@ export const Intro = () => {
     const gotToNewPage=()=>{
         navigate("/profiles");
     }
-
-
     return (
         <div>
             <div style={{backgroundImage: `url(${netflixBanner})`, backgroundRepeat: "no-repeat", backgroundSize: "cover"}}>

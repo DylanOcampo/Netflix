@@ -12,6 +12,7 @@ import React, { useContext } from 'react';
 import { ElementContext } from './Context/InfoContext';
 
 import {Info} from "./components/Info"
+import { Search } from "./Pages/Search";
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
           <Route path= "/home" element={<Home></Home>}/>
           <Route path= "/movies" element={<Series></Series>}/>
           <Route path= "/series" element={<Movies></Movies>}/>
+          <Route path= "/search" element={<Search></Search>}/>
           <Route path= "/tests" element={<Tests></Tests>}/>
         </Routes>
       </Router>

@@ -9,7 +9,7 @@ export const Content = ({identifier}) => {
     if(identifier === 1) {
         element = (
         <div>
-            <h1 style={{paddingTop: "10px",  paddingLeft: "10px"}}>Netflix Originals</h1>
+            <h1 style={{paddingTop: "10px",  paddingLeft: "10px"}}>New Movies</h1>
             
                 <DiscoverMovie num ={1}></DiscoverMovie>
             
