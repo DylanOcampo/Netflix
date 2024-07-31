@@ -4,20 +4,16 @@ const ElementContext = createContext();
 
 const ElementProvider = ({ children }) => {
   const [value, setValue] = useState(0);
-  const [type, setType] = useState(0);
+  const [identifier, setIdentifier] = useState(0);
 
-  const changeValue = (newValue) => {
+  const changeValue = (newValue, newIdentifier) => {
     console.log(newValue);
     setValue(newValue);
-  };
-
-  const changeType = (newValue) => {
-    console.log('Second value:', newValue);
-    setType(newValue);
+    setIdentifier(newIdentifier);
   };
 
   return (
-    <ElementContext.Provider value={{ value, changeValue, type, changeType }}>
+    <ElementContext.Provider value={{ value, changeValue, identifier }}>
       {children}
     </ElementContext.Provider>
   );

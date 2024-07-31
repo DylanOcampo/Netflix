@@ -65,7 +65,7 @@ export const DiscoverMovie = ({num}) => {
         <div className="slider-container">
             <Slider {...settings}>
                 {movies.map(movie => (
-          <MoviePrefab  url = {movie.poster_path} key={movie.id}> </MoviePrefab>
+          <MoviePrefab  url = {movie.poster_path} referenceId={movie.id} title={movie.name}> </MoviePrefab>
         ))}
             </Slider> 
             

@@ -8,9 +8,15 @@ import { Series } from "./Pages/Series";
 import '../src/App.css';
 import { Tests } from "./Pages/Tests";
 
+import React, { useContext } from 'react';
+import { ElementContext } from './Context/InfoContext';
+
+import {Info} from "./components/Info"
+
+
 function App() {
 
-  
+  const { value, type } = useContext(ElementContext);
   
   return (
     
@@ -27,7 +33,8 @@ function App() {
           <Route path= "/tests" element={<Tests></Tests>}/>
         </Routes>
       </Router>
-
+      {value !== 0 ? <Info referenceid={value} identifier={type}></Info> : null}
+    
     </div>
   );
 }
