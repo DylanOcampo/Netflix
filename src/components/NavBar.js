@@ -36,6 +36,13 @@ const navigate = useNavigate()
         
     }
 
+    const handleKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      changeValue(query);
+    }
+  };
+
   const [activeLink, setActiveLink] = useState(baseState);
   const [scrolled, setScrolled] = useState(false);
 
@@ -74,7 +81,11 @@ const navigate = useNavigate()
             
             <span >
               <div  style={{paddingRight: "10px", display: "flex"}}>
-                {isSearchActive ? <div style={{paddingTop: "10px"}}><Form.Control type="text" value={query} onChange={e => setQuery(e.target.value)} className="SearchInput" /> 
+                {isSearchActive ? <div style={{paddingTop: "10px"}}><Form.Control type="text" value={query} onKeyPress={handleKeyPress} onChange={e =>  setQuery(e.target.value)
+    
+                  
+
+                } className="SearchInput" /> 
                 <button onClick={() => goToHome()} className="clearButton"><img src={navIcon3} alt="" style={{width: "20px", position: "relative", left: "-30px", bottom: "-5px"}}/></button>
                 
                 </div>: null}
@@ -84,6 +95,8 @@ const navigate = useNavigate()
               </div>
 
             </span>
+
+            
 
       </Navbar>
 
