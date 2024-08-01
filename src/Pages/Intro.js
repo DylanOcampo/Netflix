@@ -1,5 +1,6 @@
 import { Col, Row } from "react-bootstrap"
 import logo from '../assets/imgs/Logonetflix.png';
+import tdmb from "../assets/imgs/tdmbLogo.svg";
 import Button from 'react-bootstrap/Button';
 import netflixBanner from '../assets/imgs/NetflixBanner.jpg';
 
@@ -37,8 +38,9 @@ export const Intro = () => {
                         </InputGroup></Col>
                         <Col style={{paddingLeft: "10px"}}><Button style={{fontSize: "30px", backgroundColor: "red", color: "white", paddingLeft: "10px", paddingRight:" 10px", paddingTop: "10px", paddingBottom: "10px", borderRadius: "5px"}} onClick={() => gotToNewPage()}><h4 style={{fontSize: "20px"}}>Get Started</h4></Button></Col>
                     </Row>
+                    <img src ={tdmb} style={{maxHeight: "100px", position:"absolute", top: "100px"}}></img>
                 </div>
-
+                
             </div>
 
         </div>

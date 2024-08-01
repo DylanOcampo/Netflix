@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { SeriesPrefab } from "./SeriesPrefab.js";
+import { SearchPrefab } from "./SearchPrefab";
 
 
 export const SearchElement = ({query}) => {
@@ -14,7 +14,6 @@ export const SearchElement = ({query}) => {
     const fetchData = async () => {
         const result = await fetch(url)
         const json = await result.json();
-        console.log(json);
         setMovies(json.results);
     }
     fetchData();
@@ -26,6 +25,7 @@ export const SearchElement = ({query}) => {
       for (let index = 0; index < movies.length; index++) {
         let helperUrl;
         let helperName;
+        let helperType;
         if(movies[index].backdrop_path === null){
           helperUrl = movies[index].poster_path;
         }else{
@@ -37,8 +37,13 @@ export const SearchElement = ({query}) => {
         }else{
           helperName = movies[index].name;
         }
+        if(movies[index].media_type === "tv"){
+          helperType = 0;
+        }else{
+          helperType = 1; 
+        }
 
-        SearchResults.push(<div style ={{padding: "10px"}}> <SeriesPrefab  url = { helperUrl} referenceId={movies[index].id} title={helperName}> </SeriesPrefab></div>)
+        SearchResults.push(<div style ={{padding: "10px"}}> <SearchPrefab  url = { helperUrl} referenceId={movies[index].id} title={helperName} identifier={helperType}> </SearchPrefab></div>)
       }
     }
 

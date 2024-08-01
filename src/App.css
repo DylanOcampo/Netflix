@@ -177,7 +177,7 @@ p.danger {
   background-color: #00000075;
   border-color: green;
   height: 50px;
-  width: 500px;
+  width: 20vw;
   -webkit-text-fill-color: #fff;
 }
 
